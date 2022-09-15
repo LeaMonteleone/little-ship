@@ -1,0 +1,103 @@
+body {
+  background-color: #16213e;
+}
+
+body > h1 {
+  color: #e94560;
+  font-family: "Audiowide", cursive;
+  font-size: 3em;
+  text-align: center;
+}
+
+.main-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+#score,
+#lives {
+  color: white;
+  font-family: "Roboto";
+}
+
+.text-container > p {
+  font-size: 1.5em;
+  max-width: 400px;
+  font-family: "Roboto";
+  color: white;
+  text-align: justify;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+}
+#player {
+  position: absolute;
+  background-image: url(../img/ship.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+
+#enemy {
+  background-image: url(../img/ufo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+#container {
+  background-color: black;
+  background-image: url(../img/galaxy3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border: solid 4px #0f3460;
+  border-radius: 10px;
+}
+
+.gameover-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+}
+#btn-play {
+  font-family: "Roboto";
+  margin-top: 1em;
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#game-over {
+  color: #e94560;
+  font-family: "Audiowide", cursive;
+  font-size: 2.5em;
+  text-align: center;
+}
+.n {
+  transform: rotate(90deg);
+}
+
+.e {
+  transform: rotate(180deg);
+}
+
+.s {
+  transform: rotate(270deg);
+}
+
+.w {
+  transform: rotate(0deg);
+}
+
+.nodisp {
+  display: none;
+}

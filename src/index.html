@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Little Ship Game</title>
+  </head>
+
+  <body onload="doIt()">
+    <h1>LITTLE SHIP</h1>
+    <div class="main-container">
+      <section class="text-container">
+        <p>
+          Use the arrow keys to move around, be careful of the boundaries,
+          they'll take your life! If you catch the ufo you will score points,
+          how many points can you make? Let's play!
+        </p>
+        <section class="score-container">
+          <h2 id="score"></h2>
+          <h2 id="lives"></h2>
+        </section>
+      </section>
+
+      <section id="container">
+        <div id="player"></div>
+        <div id="enemy"></div>
+        <div class="gameover-container">
+          <div id="game-over">Game Over</div>
+          <button id="btn-play" class="nodisp">PLAY AGAIN</button>
+        </div>
+      </section>
+    </div>
+    <script src="index.ts"></script>
+  </body>
+</html>

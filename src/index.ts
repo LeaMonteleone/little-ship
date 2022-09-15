@@ -1,9 +1,9 @@
 const size = 90;
 const N = 8;
 const M = 7;
-const delta = size / 10;
-const acel = delta * 5;
-const AIR = 1.5;
+const delta = size / 10; 
+const acel = delta * 5; //Speed up
+const AIR = 1.5; // Space between player and enemy
 
 let game;
 

@@ -51,6 +51,7 @@ function doIt() {
   draw(game.player);
   draw(game.enemy);
 
+  //Position game over div in the middle vertically
   var gameOverDiv = document.getElementById("game-over");
   gameOverDiv.style.top =
     Math.round((game.board.height - gameOverDiv.clientHeight) / 2) + "px";
@@ -58,6 +59,7 @@ function doIt() {
 
   document.onkeydown = move;
 
+  //Change enemy position after 2 seconds
   game.enemyUpdateEnemy = setInterval(updateEnemy, 2000);
 }
 
@@ -73,11 +75,11 @@ function resetPlayerPosition() {
 
 function positionEnemy() {
   do {
-    game.enemy.x = numeroAlazarDentroDelRango(
+    game.enemy.x = randomNumber(
       0,
       game.board.width - game.enemy.size
     );
-    game.enemy.y = numeroAlazarDentroDelRango(
+    game.enemy.y = randomNumber(
       0,
       game.board.height - game.enemy.size
     );
@@ -85,6 +87,7 @@ function positionEnemy() {
 
 }
 
+// function to determine if player and enemy are too close together
 function collision(obj1, obj2, air = AIR) {
   return (
     obj1.x >= obj2.x - obj1.size * air &&
@@ -108,44 +111,51 @@ function draw(who) {
 
 function move(evt) {
   const realDelta = evt.shiftKey ? acel : delta;
-  switch (evt.code) {
+  // evt.code = which arrow key is pressed
+  switch (evt.code)  {
     case "ArrowLeft":
+      //If it is within the limit, it moves, if not, it dies.
       if (game.player.x - realDelta >= 0) {
         game.player.x -= realDelta;
-      } /*if (evt.shiftKey) */ else {
-        /*game.player.x = 0;*/ die();
+      } else {
+        die();
       }
       game.player.bearing = "w";
       break;
     case "ArrowRight":
+      //If it is within the limit, it moves, if not, it dies.
       if (game.player.x + realDelta <= game.board.width - game.player.size) {
         game.player.x += realDelta;
-      } /*if (evt.shiftKey)*/ else {
+      }  else {
         die();
-        /*game.player.x = game.board.width - game.player.size;*/
+        
       }
       game.player.bearing = "e";
       break;
     case "ArrowUp":
+      //If it is within the limit, it moves, if not, it dies.
       if (game.player.y - realDelta >= 0) {
         game.player.y -= realDelta;
-      } /*if (evt.shiftKey)*/ else {
+      }  else {
         die();
-        /* game.player.y = 0;*/
+        
       }
       game.player.bearing = "n";
       break;
     case "ArrowDown":
+      //If it is within the limit, it moves, if not, it dies.
       if (game.player.y + realDelta <= game.board.height - game.player.size) {
         game.player.y += realDelta;
-      } /*if (evt.shiftKey) */ else {
+      }  else {
         die();
-        /*game.player.y = game.board.height - game.player.size;*/
+        
       }
       game.player.bearing = "s";
       break;
   }
-  draw(game.player);
+  draw(game.player); //I've to redraw it, otherwise it will remain static.
+
+  //check that both aren't in the same position.
   if (collision(game.enemy, game.player, 0.7)) {
     score();
     setTimeout(function () {
@@ -154,7 +164,7 @@ function move(evt) {
   }
 }
 
-function numeroAlazarDentroDelRango(min, max) {
+function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 

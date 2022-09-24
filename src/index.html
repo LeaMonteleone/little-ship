@@ -18,18 +18,27 @@
   <body onload="doIt()">
     <h1>LITTLE SHIP</h1>
     <div class="main-container">
-      <section class="text-container">
-        <p>
-          Use the arrow keys to move around, be careful of the boundaries,
-          they'll take your life! If you catch the ufo you will score points,
-          how many points can you make? Let's play!
-        </p>
-        <section class="score-container">
-          <h2 id="score"></h2>
-          <h2 id="lives"></h2>
-        </section>
-      </section>
+      <div class="left-container">
+        <section class="text-container">
+          <p>
+            Use the arrow keys to move around, be careful of the boundaries,
+            they'll take your life! <br>
+            Shift key will speed you up!
+            
+            <p>If you catch the ufo you will score
+            points, how many points can you make?
+            </p>
 
+            <p> Let's play!
+              </p>
+  
+          </p>
+          <section class="score-container">
+            <h2 id="score"></h2>
+            <h2 id="lives"></h2>
+          </section>
+        </section>
+      </div>
       <section id="container">
         <div id="player"></div>
         <div id="enemy"></div>
@@ -39,6 +48,6 @@
         </div>
       </section>
     </div>
-    <script src="index.ts"></script>
+    <script defer type="module " src="./index.ts"></script>
   </body>
 </html>

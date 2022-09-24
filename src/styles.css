@@ -10,10 +10,11 @@ body > h1 {
 }
 
 .main-container {
+  min-width: 1080px;
   width: 90%;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 #score,
 #lives {
@@ -21,9 +22,13 @@ body > h1 {
   font-family: "Roboto";
 }
 
+.left-container {
+  width: 30%;
+  padding-right: 5em;
+}
 .text-container > p {
-  font-size: 1.5em;
-  max-width: 400px;
+  font-size: 1.2em;
+
   font-family: "Roboto";
   color: white;
   text-align: justify;
@@ -58,6 +63,7 @@ body > h1 {
   position: relative;
   border: solid 4px #0f3460;
   border-radius: 10px;
+  margin-left: 2em;
 }
 
 .gameover-container {

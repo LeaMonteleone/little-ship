@@ -175,7 +175,7 @@ function showScore() {
 
 function showLives() {
   let livesElement = document.getElementById("lives");
-  livesElement.innerHTML = `Vidas: ${game.lives}`;
+  livesElement.innerHTML = `Lives ${game.lives}`;
   if (game.lives == 1) {
     livesElement.style.color = "red";
     livesElement.style.fontStyle = "italic";

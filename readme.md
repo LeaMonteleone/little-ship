@@ -6,12 +6,12 @@ Fue un proyecto práctico para la materia Programación Multimedia 2 en la unive
 
 #### Instrucciones
 
-##### _Objetivo: _
+##### _Objetivo:_
 
 Atrapar al ovni en movimiento, cuando lo toques, sumaras puntos.
 Los limites de la galaxia te quitaran vidas, solo tenes 3.
 
-**Movimiento: **Flechas del teclado
+**Movimiento:** Flechas del teclado
 **Aceleración:** Tecla Shift
 
 ---
@@ -22,7 +22,7 @@ Little ship is a game developed in Typescript, HTML and CSS.
 
 It was a practice project for the Multimedia Programming 2 course at Maimonides University of Buenos Aires in order to practice the concept of OOP, positioning and DOM.
 
-####Instructions
+#### Instructions
 
 ##### _Objective_
 
